@@ -170,19 +170,19 @@ class _BodyState extends State<Body> {
                         fontFamily: 'roboto'),
                   ),
                 ),
-                Positioned(
-                  left: 50,
-                  right: 50,
-                  bottom: 0,
-                  top: 50,
-                  child: Text(
-                    'Lorem ipsum dolor sit amet, con ? ',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15.0,
-                        fontFamily: 'roboto'),
-                  ),
-                ),
+                // Positioned(
+                //   left: 50,
+                //   right: 50,
+                //   bottom: 0,
+                //   top: 50,
+                //   child: Text(
+                //     'Lorem ipsum dolor sit amet, con ? ',
+                //     style: TextStyle(
+                //         color: Colors.white,
+                //         fontSize: 15.0,
+                //         fontFamily: 'roboto'),
+                //   ),
+                // ),
               ],
             ),
           ),

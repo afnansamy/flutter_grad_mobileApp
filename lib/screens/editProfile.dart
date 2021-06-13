@@ -9,6 +9,7 @@ import 'components/PopUpDialog.dart';
 
 
 String finalName,finalEmail,finalStudentPhone,finalParentPhone,finalBirthDate;
+int finalId;
 class EditProfileScreen extends StatefulWidget {
   @override
   _EditProfileScreenState createState() => _EditProfileScreenState();
@@ -43,12 +44,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     var studentPhone = sharedPreferences.getString('studentPhone');
     var parentPhone = sharedPreferences.getString('parentPhone');
     var birth_date = sharedPreferences.getString('birth_date');
+    var id=sharedPreferences.getInt('id');
     setState((){
       finalName=name;
       finalEmail=email;
       finalStudentPhone=studentPhone;
       finalParentPhone=parentPhone;
       finalBirthDate=birth_date;
+      finalId=id;
 
 
       setState(stoploading);
@@ -168,7 +171,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       onPressed: () async {
 
                         final Dio dio=new Dio();
-                        Response res = await dio.put("http://localhost:8000/students/8/update",
+                        Response res = await dio.put("http://localhost:8000/students/${finalId}/update",
                             data: {"name":nameField.text,"email":emailField.text, "birth_date":birthDateField.text,
                               "student_phone_number":studentPhoneField.text,"parent_phone_number":parentPhoneField.text},
                             options: Options(
