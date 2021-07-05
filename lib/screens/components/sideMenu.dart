@@ -95,11 +95,14 @@ class _NavDrawerState extends State<NavDrawer> {
           ListTile(
               leading: Icon(Icons.qr_code),
               title: Text('Scan QR'),
-              onTap: () async {
-                scanQRCode();
+              // onTap: () async {
+              //  // scanQRCode();
+              //
+              //
+              // }
+              onTap: () => {Navigator.of(context).pushNamed('/scanqr')},
 
-
-              }),
+    ),
           ListTile(
             leading: Icon(Icons.language),
             title: Text('Language'),

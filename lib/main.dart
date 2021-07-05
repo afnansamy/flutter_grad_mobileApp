@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
        BlocProvider(create: (context)=> AuthBloc(LoginInitState(), AuthRepository()))
       ],
       child: MaterialApp(
-
+        debugShowCheckedModeBanner: false,
 
         //initialRoute: _initialRoute,
 
